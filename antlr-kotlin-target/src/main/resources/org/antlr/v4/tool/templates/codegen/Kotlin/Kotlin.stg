@@ -708,9 +708,9 @@ AddToLabelList(a) ::= "<ctx(a.label)>.<a.listName>.add(<labelref(a.label)>!!)"
 
 TokenDecl(t) ::= "var <t.name>: <TokenLabelType()>? = null"
 TokenTypeDecl(t) ::= "var <t.name>: Int"
-TokenListDecl(t) ::= "var <t.name> :Mutable\<Token> = ArrayList\<Token>()"
+TokenListDecl(t) ::= "var <t.name>: MutableList\<Token> = ArrayList\<Token>()"
 RuleContextDecl(r) ::= "var <r.name>: <r.ctxName>? = null"
-RuleContextListDecl(rdecl) ::= "var <rdecl.name> : MutableList\<<rdecl.ctxName>> = ArrayList\<<rdecl.ctxName>>()"
+RuleContextListDecl(rdecl) ::= "var <rdecl.name>: MutableList\<<rdecl.ctxName>> = ArrayList\<<rdecl.ctxName>>()"
 
 ContextTokenGetterDecl(t)      ::=
     "fun <t.name>() : TerminalNode? = getToken(<parser.name>.Tokens.<t.name>.id, 0)"
